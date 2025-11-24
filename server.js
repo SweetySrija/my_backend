@@ -19,6 +19,9 @@ db.exec(initSql, (err) => {
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/products', require('./routes/products'));
+app.get('/', (req, res) => {
+  res.send('Backend is live!');
+});
 
 // Optionally protect routes with middleware/auth.js
 // const authMiddleware = require('./middleware/auth');
